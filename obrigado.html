@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obrigado! — Momento Imóveis</title>
+<meta name="description" content="Recebemos seu contato. Um consultor da Momento Imóveis falará com você em breve.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,400;1,500&family=Jost:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<!-- Dica: este é o ponto ideal para disparar a conversão (Google Ads / Meta Pixel) -->
+</head>
+<body>
+
+<main class="thanks">
+  <div class="thanks-card">
+    <div class="thanks-brand">
+      <img class="logo-mark" src="logo.svg" alt="Momento Imóveis" width="42" height="42">
+      <span><span class="name">MOMENTO IMÓVEIS</span><br><span class="tag">Perfeito para mudar</span></span>
+    </div>
+
+    <div class="thanks-check">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+
+    <h1>Recebemos seu contato!<span class="script">Obrigado pela confiança</span></h1>
+    <p>Um de nossos consultores vai falar com você em até <strong style="color:#fff">1 hora útil</strong>. Quer adiantar? Fale agora mesmo pelo WhatsApp.</p>
+
+    <div class="actions">
+      <a id="waBtn" href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.5 15.2L2 22l4.9-1.3A10 10 0 1012 2z"/></svg>
+        Falar no WhatsApp
+      </a>
+      <a href="index.html" class="btn btn-ghost">Voltar ao site</a>
+    </div>
+  </div>
+</main>
+
+<script>
+  // Usa a mensagem montada no formulário; se acessar direto, mantém o link padrão
+  var link = sessionStorage.getItem('waLink');
+  if (link) { document.getElementById('waBtn').href = link; sessionStorage.removeItem('waLink'); }
+</script>
+
+</body>
+</html>

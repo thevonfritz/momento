@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <g stroke="#ffffff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <!-- lote (losango) -->
+    <path d="M60 66 L102 86 L60 106 L18 86 Z"/>
+
+    <!-- TORRE ALTA (esquerda) -->
+    <path d="M48 90 L33 82.5 L33 28.5 L48 36"/>
+    <path d="M48 90 L63 82.5 L63 28.5 L48 36"/>
+    <path d="M48 36 L33 28.5 L48 21 L63 28.5 Z"/>
+    <path d="M48 90 L48 36"/>
+  </g>
+
+  <!-- chevrons (andares) da torre alta -->
+  <g stroke="#ffffff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M33 42.5 L48 50 L63 42.5"/>
+    <path d="M33 54.5 L48 62 L63 54.5"/>
+    <path d="M33 66.5 L48 74 L63 66.5"/>
+  </g>
+
+  <!-- TORRE MENOR (direita) -->
+  <g stroke="#ffffff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M78 92 L65 85.5 L65 45.5 L78 52"/>
+    <path d="M78 92 L91 85.5 L91 45.5 L78 52"/>
+    <path d="M78 52 L65 45.5 L78 39 L91 45.5 Z"/>
+    <path d="M78 92 L78 52"/>
+  </g>
+
+  <!-- listras verticais da torre menor -->
+  <g stroke="#ffffff" stroke-width="2" stroke-linecap="round">
+    <path d="M71.5 49 L71.5 89"/>
+    <path d="M84.5 49 L84.5 89"/>
+  </g>
+
+  <!-- janelas em destaque (dourado) -->
+  <g stroke="#f4c843" stroke-width="3.4" stroke-linecap="round">
+    <path d="M58 31 L58 47"/>
+    <path d="M88 47 L88 70"/>
+  </g>
+</svg>

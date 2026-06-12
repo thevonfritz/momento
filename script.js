@@ -21,13 +21,27 @@ const io = new IntersectionObserver((entries) => entries.forEach(e => {
 }), { threshold: 0.15 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+// ===== Máscara de telefone: (00) 00000-0000 =====
+const tel = document.getElementById('tel');
+tel.addEventListener('input', () => {
+  let d = tel.value.replace(/\D/g, '').slice(0, 11); // só dígitos, máx 11
+  if (d.length > 6)      d = `(${d.slice(0,2)}) ${d.slice(2,7)}-${d.slice(7)}`;
+  else if (d.length > 2) d = `(${d.slice(0,2)}) ${d.slice(2)}`;
+  else if (d.length > 0) d = `(${d}`;
+  tel.value = d;
+});
+
 // ===== Form -> WhatsApp =====
-document.getElementById('leadForm').addEventListener('submit', (e) => {
+const leadForm = document.getElementById('leadForm');
+leadForm.addEventListener('submit', (e) => {
   e.preventDefault();
+  if (!leadForm.checkValidity()) { leadForm.reportValidity(); return; } // valida obrigatórios
   const v = id => document.getElementById(id).value;
   const txt = `Olá! Sou ${v('nome')}.%0AInteresse: ${v('interesse')}%0ATelefone: ${v('tel')}` +
     (v('msg') ? `%0AMensagem: ${v('msg')}` : '');
-  open(`https://wa.me/${CONFIG.whatsapp}?text=${txt}`, '_blank');
+  // guarda o link do WhatsApp para o botão da página de obrigado (não abre agora)
+  sessionStorage.setItem('waLink', `https://wa.me/${CONFIG.whatsapp}?text=${txt}`);
+  location.href = 'obrigado.html';
 });
 
 // ===== Modais (conteúdo + comportamento) =====
